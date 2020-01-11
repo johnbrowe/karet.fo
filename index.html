@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<!--
+	Cascade by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+-->
+<html>
+  <head>
+    <title>Karet.fo</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <style type="text/css">
+      #basicMap {
+        width: 100%;
+        height: 300px;
+        margin: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="is-preload" onload="init();">
+    <!-- Header -->
+    <header id="header" class="alt">
+      <a class="logo" href="index.html">Karet</a>
+      <nav>
+        <ul>
+          <li>
+            <a href="#menu">Menu</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="generic.html">Generic</a></li>
+        <li><a href="elements.html">Elements</a></li>
+        <li><a href="#" class="button primary">Sign Up</a></li>
+        <li><a href="#" class="button">Log In</a></li>
+      </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section id="banner">
+      <div class="inner">
+        <img src="./images/karet-logo.svg" alt="Karet logo" width="300" />
+        <p>
+          Dolor sit amet nullam pede semper est, vitae luctus metus libero eu
+          augue. Morbi purus sed libero, faucibus adipiscing, commodo.
+        </p>
+        <ul class="actions special">
+          <li>
+            <a href="#one" class="button large wide scrolly-middle"
+              >Bílegg borð</a
+            >
+          </li>
+          <li>
+            <a href="#four" class="button large wide scrolly-middle">Menu</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Spotlight -->
+    <article id="one" class="spotlight odd accent1">
+      <div class="inner">
+        <div class="image" data-position="top right">
+          <img src="images/nathan.jpg" alt="" />
+        </div>
+
+        <h2>Hví Karet?</h2>
+        <div class="content">
+          <h3>
+            EINASTI KARETMAKARI<br />
+            Í FØROYUM
+          </h3>
+          <p>
+            Miðskeiðis í 30’unum gjørdist Erik Simonsen fyrsti karetmakari í
+            Føroyum, tá hann lat verkstað upp í hesum húsunum.
+          </p>
+          <p>
+            Her smíðaði og umvældi hann undirstell til hestavognar og g jørdi og
+            umvældi hjól til vognar, trillubørir og annað.
+          </p>
+          <!-- <ul class="actions">
+            <li><a href="#" class="button primary accent1">Les meira</a></li>
+          </ul> -->
+        </div>
+      </div>
+    </article>
+
+    <!-- Spotlight -->
+    <!-- <article id="two" class="spotlight even accent2">
+      <div class="inner">
+        <div class="image" data-position="top left">
+          <img src="images/pic02.jpg" alt="" />
+        </div>
+        <h2>
+          Lorem<br />
+          faucibus et<br />
+          aliquam
+        </h2>
+        <div class="content">
+          <h3>Sed etiam adipiscing <br />magna gravida</h3>
+          <p>
+            Sed egestas, ante et vulputate lorem ipsum dolor sit amet nullam
+            pede semper est, vitae luctus metus libero eu augue. Morbi purus sed
+            libero, faucibus adipiscing, gravida lorem ipsum.
+          </p>
+          <ul class="actions">
+            <li><a href="#" class="button primary accent2">Learn more</a></li>
+          </ul>
+        </div>
+      </div>
+    </article> -->
+
+    <!-- Spotlight -->
+    <!-- <article id="three" class="spotlight odd accent3">
+      <div class="inner">
+        <div class="image" data-position="center right">
+          <img src="images/pic03.jpg" alt="" />
+        </div>
+        <h2>
+          Ante sed<br />
+          commodo<br />
+          libero
+        </h2>
+        <div class="content">
+          <h3>Libero sed magna et <br />amet commodo</h3>
+          <p>
+            Sed egestas, ante et vulputate lorem ipsum dolor sit amet nullam
+            pede semper est, vitae luctus metus libero eu augue. Morbi purus sed
+            libero, faucibus adipiscing, gravida lorem ipsum.
+          </p>
+          <ul class="actions">
+            <li><a href="#" class="button primary accent3">Learn more</a></li>
+          </ul>
+        </div>
+      </div>
+    </article> -->
+
+    <!-- Carousel -->
+    <section id="four" class="wrapper style4">
+      <div class="inner">
+        <header class="major">
+          <h2>Menu</h2>
+        </header>
+        <div class="carousel">
+          <article class="menu-background">
+            <div class="image" data-position="top center">
+              <img src="images/menu-up.jpg" alt="" />
+            </div>
+            <div class="content">
+              <!-- Menu section -->
+              <h3>Hot drinks</h3>
+              <div class="menu-king">
+                <div>
+                  <div class="menu-item">
+                    <p>
+                      Tea or filter coffee (free refill)
+                    </p>
+                    <p>25,-</p>
+                  </div>
+                  <div class="menu-item">
+                    <p>Caffe Latte/Cappuchino</p>
+                    <p>38,-</p>
+                  </div>
+                  <div class="menu-item">
+                    <p>Americano/Espresso</p>
+                    <p>35,-</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu section -->
+              <h3 style="margin-top: 20px;">Soft drinks</h3>
+              <div class="menu-king">
+                <div>
+                  <div class="menu-item">
+                    <p>
+                      Apple or Orange juice
+                    </p>
+                    <p>20,-</p>
+                  </div>
+                  <div class="menu-item">
+                    <p>Soda</p>
+                    <p>20,-</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu section -->
+              <h3 style="margin-top: 20px;">Beer</h3>
+              <div class="menu-king">
+                <div>
+                  <div class="menu-item">
+                    <p>
+                      Slupp / 1888
+                    </p>
+                    <p>60,-</p>
+                  </div>
+                  <div class="menu-item">
+                    <p>Okkara Gull/FB Gull</p>
+                    <p>45,-</p>
+                  </div>
+                  <div class="menu-item">
+                    <p>Okkara Klassik/FB Veðr</p>
+                    <p>35,-</p>
+                  </div>
+                  <div class="menu-item">
+                    <p>Okkara Cider</p>
+                    <p>45,-</p>
+                  </div>
+                  <div style="margin-bottom: 20px;"></div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- <article>
+            <div class="image" data-position="center center">
+              <img src="images/pic05.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>Aliquam feugiat sed malesuada</h3>
+              <p>
+                Sit amet nullam pede semper est, vitae luctus metus libero eu
+                augue. Morbi purus sed egestas, ante et vulputate<br />
+                lorem ipsum dolor sit amet nullam. Adipiscing sed nullam tempus
+                aliquam veroeros.
+              </p>
+              <ul class="actions special">
+                <li>
+                  <a href="#" class="button primary accent4">Learn more</a>
+                </li>
+              </ul>
+            </div>
+          </article> -->
+          <!-- <article>
+            <div class="image" data-position="center center">
+              <img src="images/pic06.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>Feugiat lorem ipsum dolor amet</h3>
+              <p>
+                Nullam pede semper est vitae luctus metus. Magna lorem ipsum
+                libero eu adipiscing, commodo quis, gravida lorem<br />
+                ipsum. Augue morbi purus sed libero, faucibus sed tempus aliquam
+                lorem ipsum dolor amet.
+              </p>
+              <ul class="actions special">
+                <li>
+                  <a href="#" class="button primary accent4">Learn more</a>
+                </li>
+              </ul>
+            </div>
+          </article> -->
+          <!-- <nav>
+            <a href="#" class="previous"><span class="label">Previous</span></a>
+            <a href="#" class="next"><span class="label">Next</span></a>
+          </nav> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Posts -->
+    <!-- <section id="five" class="wrapper">
+      <div class="inner">
+        <header class="major">
+          <h2>Ante libero</h2>
+        </header>
+        <div class="posts">
+          <article>
+            <a href="#" class="image"><img src="images/pic07.jpg" alt=""/></a>
+            <div class="content">
+              <h3><a href="#">Sed faucibus</a></h3>
+              <p>
+                Sed egestas, ante et vulputate lorem ipsum sed dolor sit amet
+                Morbi purus sed libero, faucibus adipiscing, commodo quis. Lorem
+                ipsum dolor sit amet nullam sed adipiscing.
+              </p>
+              <ul class="actions special">
+                <li>
+                  <a href="#" class="button primary accent1">Learn more</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <a href="#" class="image"><img src="images/pic08.jpg" alt=""/></a>
+            <div class="content">
+              <h3><a href="#">Morbi commodo</a></h3>
+              <p>
+                Sed egestas, ante et vulputate lorem ipsum sed dolor sit amet
+                Morbi purus sed libero, faucibus adipiscing, commodo quis. Lorem
+                ipsum dolor sit amet nullam sed adipiscing.
+              </p>
+              <ul class="actions special">
+                <li>
+                  <a href="#" class="button primary accent2">Learn more</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <a href="#" class="image"><img src="images/pic09.jpg" alt=""/></a>
+            <div class="content">
+              <h3><a href="#">Tempus lorem</a></h3>
+              <p>
+                Sed egestas, ante et vulputate lorem ipsum sed dolor sit amet
+                Morbi purus sed libero, faucibus adipiscing, commodo quis. Lorem
+                ipsum dolor sit amet nullam sed adipiscing.
+              </p>
+              <ul class="actions special">
+                <li>
+                  <a href="#" class="button primary accent3">Learn more</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <a href="#" class="image"><img src="images/pic10.jpg" alt=""/></a>
+            <div class="content">
+              <h3><a href="#">Libero adipiscing</a></h3>
+              <p>
+                Sed egestas, ante et vulputate lorem ipsum sed dolor sit amet
+                Morbi purus sed libero, faucibus adipiscing, commodo quis. Lorem
+                ipsum dolor sit amet nullam sed adipiscing.
+              </p>
+              <ul class="actions special">
+                <li>
+                  <a href="#" class="button primary accent4">Learn more</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- CTA -->
+    <!-- <section id="six" class="wrapper style1">
+      <div class="inner">
+        <header class="major">
+          <h2>Tempus amet</h2>
+          <p>
+            Sed egestas, ante et vulputate lorem ipsum dolor sit amet nullam
+            pede semper est, vitae luctus metus libero eu augue. Morbi purus sed
+            libero, faucibus adipiscing, commodo quis, gravida lorem ipsum.
+          </p>
+        </header>
+        <form method="post" action="#" class="combined">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your email address"
+            class="alt accent4"
+          />
+          <input
+            type="submit"
+            class="button primary accent4"
+            value="Subscribe"
+          />
+        </form>
+      </div>
+    </section> -->
+    <div id="basicMap"></div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="contact-icons">
+        <li class="icon solid fa-map-marker-alt">
+          <a href="#"
+            >Doktara Jakobsens gøta 14-16 | 100 Tórshavn | Faroe Islands</a
+          >
+        </li>
+        <li class="icon solid fa-phone"><a href="#">+298 500 600</a></li>
+        <li class="icon solid fa-envelope">
+          <a href="#">hotel@62n.fo</a>
+        </li>
+      </ul>
+      <div class="copyright">
+        &copy; Karet. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+
+    <script>
+      function init() {
+        map = new OpenLayers.Map("basicMap");
+        var mapnik = new OpenLayers.Layer.OSM();
+        var fromProjection = new OpenLayers.Projection("EPSG:4326"); // Transform from WGS 1984
+        var toProjection = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+        var position = new OpenLayers.LonLat(62.010009, -6.776016).transform(
+          fromProjection,
+          toProjection
+        );
+        var zoom = 15;
+
+        map.addLayer(new OpenLayers.Layer.OSM());
+
+        var lonLat = new OpenLayers.LonLat(-6.776016, 62.010009).transform(
+          new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+          map.getProjectionObject() // to Spherical Mercator Projection
+        );
+
+        var zoom = 16;
+
+        var markers = new OpenLayers.Layer.Markers("Markers");
+        map.addLayer(markers);
+
+        markers.addMarker(new OpenLayers.Marker(lonLat));
+
+        map.setCenter(lonLat, zoom);
+      }
+    </script>
+  </body>
+</html>
