@@ -1,5 +1,3 @@
-@import url(fontawesome-all.min.css);
-
 /*
 	Cascade by Pixelarity
 	pixelarity.com | hello@pixelarity.com
@@ -5607,7 +5605,7 @@ body.is-preload #banner .inner {
 }
 
 .menu-item p:first-of-type {
-  width: 300px;
+  width: 250px;
 }
 
 .menu-item p:last-of-type {
