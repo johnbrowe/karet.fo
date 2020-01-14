@@ -47,24 +47,24 @@
     });
 
   // Header.
-  if ($banner.length > 0 && $header.hasClass("alt")) {
-    $window.on("resize", function() {
-      $window.trigger("scroll");
-    });
+  // if ($banner.length > 0 && $header.hasClass("alt")) {
+  //   $window.on("resize", function() {
+  //     $window.trigger("scroll");
+  //   });
 
-    $banner.scrollex({
-      bottom: $header.outerHeight(),
-      terminate: function() {
-        $header.removeClass("alt");
-      },
-      enter: function() {
-        $header.addClass("alt");
-      },
-      leave: function() {
-        $header.removeClass("alt");
-      }
-    });
-  }
+  //   $banner.scrollex({
+  //     bottom: $header.outerHeight(),
+  //     terminate: function() {
+  //       $header.removeClass("alt");
+  //     },
+  //     enter: function() {
+  //       $header.addClass("alt");
+  //     },
+  //     leave: function() {
+  //       $header.removeClass("alt");
+  //     }
+  //   });
+  // }
 
   // Images.
   $(".image[data-position]").each(function() {

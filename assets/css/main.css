@@ -136,6 +136,17 @@ table {
   border-spacing: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 body {
   -webkit-text-size-adjust: none;
 }
@@ -236,8 +247,9 @@ body,
 input,
 select,
 textarea {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: ff-meta-serif-web-pro, serif;
+  font-weight: 300;
+  font-style: normal;
   font-size: 1rem;
   line-height: 2;
 }
