@@ -12,21 +12,27 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <style type="text/css">
-      #basicMap {
-        width: 100%;
-        height: 300px;
-        margin: 0;
-      }
-    </style>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.typekit.net/rsg5jum.css" />
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
-
-    <link rel="stylesheet" href="https://use.typekit.net/rsg5jum.css" />
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 50%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
   </head>
-  <body class="is-preload" onload="init();">
+  <body class="is-preload">
     <!-- Header -->
     <header id="header" class="alt">
       <!-- <a class="logo" href="index.html">Karet</a>
@@ -38,6 +44,36 @@
         </ul>
       </nav> -->
     </header>
+
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+          class="modal__container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-1-title"
+        >
+          <header class="modal__header">
+            <h2 class="modal__title" id="modal-1-title">
+              Bílegg borð
+            </h2>
+            <button
+              class="modal__close"
+              aria-label="Close modal"
+              data-micromodal-close
+            ></button>
+          </header>
+          <main class="modal__content" id="modal-1-content">
+            <iframe
+              id="inlineFrameExample"
+              title="Inline Frame Example"
+              src="https://booking.octopuspms.com/tb/?TID=7d89e4f2-561a-443e-b904-307eac669e49&lang=en&PHONE=%2b298500610"
+            >
+            </iframe>
+          </main>
+        </div>
+      </div>
+    </div>
 
     <!-- Menu -->
     <!-- <nav id="menu">
@@ -54,13 +90,16 @@
     <section id="banner">
       <div class="inner">
         <img src="./images/karet-logo.svg" alt="Karet logo" width="300" />
-        <p>
+        <!-- <p>
           Dolor sit amet nullam pede semper est, vitae luctus metus libero eu
           augue. Morbi purus sed libero, faucibus adipiscing, commodo.
-        </p>
+        </p> -->
+        <br />
+        <br />
+        <br />
         <ul class="actions special">
           <li>
-            <a href="#one" class="button large wide scrolly-middle"
+            <a id="modal-open-map" class="button large wide scrolly-middle"
               >Bílegg borð</a
             >
           </li>
@@ -372,7 +411,8 @@
         </form>
       </div>
     </section> -->
-    <div id="basicMap"></div>
+
+    <div id="map"></div>
 
     <!-- Footer -->
     <footer id="footer">
@@ -400,36 +440,47 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/openlayers.js"></script>
-
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script>
-      function init() {
-        map = new OpenLayers.Map("basicMap");
-        var mapnik = new OpenLayers.Layer.OSM();
-        var fromProjection = new OpenLayers.Projection("EPSG:4326"); // Transform from WGS 1984
-        var toProjection = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
-        var position = new OpenLayers.LonLat(62.010009, -6.776016).transform(
-          fromProjection,
-          toProjection
-        );
-        var zoom = 15;
+      MicroModal.init();
 
-        map.addLayer(new OpenLayers.Layer.OSM());
+      (function($) {
+        $("#modal-open-map").click(function() {
+          MicroModal.show("modal-1");
+        });
+      })(jQuery);
+    </script>
+    <script>
+      var map;
+      function initMap() {
+        var latlon = { lat: 62.01001, lng: -6.776053 };
 
-        var lonLat = new OpenLayers.LonLat(-6.776016, 62.010009).transform(
-          new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-          map.getProjectionObject() // to Spherical Mercator Projection
-        );
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: latlon,
+          zoom: 16
+        });
 
-        var zoom = 16;
+        var image = {
+          url: "./../img/karet.png",
+          // This marker is 20 pixels wide by 32 pixels high.
+          size: new google.maps.Size(50, 50),
+          // The origin for this image is (0, 0).
+          origin: new google.maps.Point(0, 0),
+          // The anchor for this image is the base of the flagpole at (0, 32).
+          anchor: new google.maps.Point(0, 32)
+        };
 
-        var markers = new OpenLayers.Layer.Markers("Markers");
-        map.addLayer(markers);
-
-        markers.addMarker(new OpenLayers.Marker(lonLat));
-
-        map.setCenter(lonLat, zoom);
+        var marker = new google.maps.Marker({
+          position: latlon,
+          map: map,
+          icon: image
+        });
       }
     </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRe7woXQWDUwJai0x-45CZIS-__DnrxzI&callback=initMap"
+      async
+      defer
+    ></script>
   </body>
 </html>
