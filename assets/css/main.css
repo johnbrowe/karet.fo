@@ -457,7 +457,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #555;
+  color: #000;
 }
 
 blockquote {
@@ -4517,7 +4517,8 @@ table.alt tbody tr td {
 }
 
 .carousel article .content h3 {
-  color: #555 !important;
+  color: #000 !important;
+  font-weight: 600;
 }
 
 .carousel nav a {
@@ -5584,31 +5585,53 @@ body.is-preload #banner .inner {
 }
 
 /*********************************************/
+.menu h3 .english {
+  color: rgb(173, 92, 23);
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
 .menu-king {
   display: flex;
   justify-content: center;
 }
 
 .menu-item {
-  display: flex;
+  /* display: flex; */
+  margin-bottom: 30px;
 }
 
 .menu-item p {
   margin: 0 0 5px 0;
   text-align: left;
+  color: #000;
+  line-height: 1;
+  font-size: 17px;
 }
 
 .menu-item p:first-of-type {
-  width: 250px;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 600;
+  width: 100%;
 }
 
-.menu-item p:last-of-type {
+.menu-item-english {
+  margin-top: 10px;
+}
+
+.menu-item-english p:first-of-type {
   color: rgb(173, 92, 23);
+  font-size: 0.9rem;
 }
 
-.menu-background {
-  background-image: url("./../../images/menu-background.jpg");
+.menu-item-english p {
+  font-style: italic;
+  font-size: 0.9rem;
 }
+
+/* .menu-background {
+  background-image: url("./../../images/menu-background.jpg");
+} */
 
 /**************************\
   Basic Modal Styles
@@ -5791,4 +5814,29 @@ iframe {
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: transform;
+}
+
+.flex-menu {
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.flex-menu p {
+  font-family: "ff-meta-serif-web-pro", serif !important;
+  font-weight: 500 !important;
+  font-size: 17px !important;
+}
+
+.brown {
+  color: rgb(173, 92, 23);
+  font-size: 17px !important;
+
+  font-weight: 700;
+}
+
+.menu-king-container {
+  width: 650px;
 }
