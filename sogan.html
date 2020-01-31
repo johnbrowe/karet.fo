@@ -19,25 +19,26 @@
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body class="is-preload">
-      <a href="index.html" style="border-radius: 50%;
+    <a
+      href="index.html"
+      style="border-radius: 50%;
     padding: 15px 11px 9px 11px;
     position: fixed;
     left: 15px;
     top: 15px;
     background: white;
-    z-index: 2;">
-        <svg width="32" height="23" fill="none">
-          <path
-            d="M10.273 1.009a1.112 1.112 0 011.587 0 1.12 1.12 0 010 1.571l-8.047 8.047h26.554c.619 0 1.127.492 1.127 1.111s-.508 1.127-1.127 1.127H3.813l8.047 8.032c.429.444.429 1.159 0 1.587a1.112 1.112 0 01-1.587 0L.321 12.532a1.12 1.12 0 010-1.571l9.952-9.952z"
-            fill="#3D111C"
-          />
-        </svg>
-      </a>
-      
+    z-index: 2;"
+    >
+      <svg width="32" height="23" fill="none">
+        <path
+          d="M10.273 1.009a1.112 1.112 0 011.587 0 1.12 1.12 0 010 1.571l-8.047 8.047h26.554c.619 0 1.127.492 1.127 1.111s-.508 1.127-1.127 1.127H3.813l8.047 8.032c.429.444.429 1.159 0 1.587a1.112 1.112 0 01-1.587 0L.321 12.532a1.12 1.12 0 010-1.571l9.952-9.952z"
+          fill="#3D111C"
+        />
+      </svg>
+    </a>
+
     <!-- Main -->
     <section id="main" class="wrapper">
-      
-
       <div class="inner">
         <header class="major">
           <h1>Søgan</h1>
@@ -112,14 +113,23 @@
     <!-- Footer -->
     <footer id="footer">
       <ul class="contact-icons">
-        <li class="icon solid fa-map-marker-alt">
-          <a href="#"
-            >Doktara Jakobsens gøta 14-16 | 100 Tórshavn | Faroe Islands</a
+        <li
+          class="icon solid fa-map-marker-alt"
+          temtype="http://schema.org/PostalAddress"
+          itemscope=""
+          itemprop="address"
+        >
+          <a
+            ><span itemprop="streetAddress">Doktara Jakobsens gøta 14-16</span>
+            | <span itemprop="postalCode">100</span>
+            <span itemprop="addressLocality">Tórshavn</span> | Faroe Islands</a
           >
         </li>
-        <li class="icon solid fa-phone"><a href="#">+298 500 610</a></li>
+        <li class="icon solid fa-phone">
+          <a itemprop="telephone" href="tel:+298500610">+298 500 610</a>
+        </li>
         <li class="icon solid fa-envelope">
-          <a href="#">karet@karet.fo</a>
+          <a itemprop="email" href="mailto:karet@karet.fo">karet@karet.fo</a>
         </li>
       </ul>
       <div class="copyright">
