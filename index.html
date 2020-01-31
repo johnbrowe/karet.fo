@@ -33,7 +33,7 @@
       }
     </style>
   </head>
-  <body class="is-preload">
+  <body class="is-preload" itemscope itemtype="https://schema.org/LocalBusiness">
     <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
       <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div
@@ -70,7 +70,8 @@
         <img src="./images/karet-logo.svg" alt="Karet logo" width="300" />
         <p style="font-size: 16px; margin-top: 10px;">
           Mán-Ley: <b>09.00 - 18.00</b><br />Sun: <b>12.00 - 18.00</b>
-          <br />Tlf. <b>+298 500 610</b>
+          <br />Tlf.
+          <a itemprop="telephone" href="tel:+298500610"><b>+298 500 610</b></a>
         </p>
         <ul class="actions special">
           <li>
@@ -472,14 +473,23 @@
     <!-- Footer -->
     <footer id="footer">
       <ul class="contact-icons">
-        <li class="icon solid fa-map-marker-alt">
-          <a href="#"
-            >Doktara Jakobsens gøta 14-16 | 100 Tórshavn | Faroe Islands</a
+        <li
+          class="icon solid fa-map-marker-alt"
+          temtype="http://schema.org/PostalAddress"
+          itemscope=""
+          itemprop="address"
+        >
+          <a
+            ><span itemprop="streetAddress">Doktara Jakobsens gøta 14-16</span>
+            | <span itemprop="postalCode">100</span>
+            <span itemprop="addressLocality">Tórshavn</span> | Faroe Islands</a
           >
         </li>
-        <li class="icon solid fa-phone"><a href="#">+298 500 610</a></li>
+        <li class="icon solid fa-phone">
+          <a itemprop="telephone" href="tel:+298500610">+298 500 610</a>
+        </li>
         <li class="icon solid fa-envelope">
-          <a href="#">karet@karet.fo</a>
+          <a itemprop="email" href="mailto:karet@karet.fo">karet@karet.fo</a>
         </li>
       </ul>
       <div class="copyright">
