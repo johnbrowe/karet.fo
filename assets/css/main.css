@@ -5601,6 +5601,17 @@ body.is-preload #banner .inner {
   margin-bottom: 30px;
 }
 
+.item-flex {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.menu-item .color-gold {
+  color: #9a582b !important;
+  font-weight: 600 !important;
+}
+
 .menu-item p {
   margin: 0 0 5px 0;
   text-align: left;
@@ -5609,7 +5620,7 @@ body.is-preload #banner .inner {
   font-size: 15px;
 }
 
-.menu-item p:first-of-type {
+.item-heading {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 600;
   width: 100%;
@@ -5828,8 +5839,8 @@ iframe {
 }
 
 .flex-menu p {
-  font-family: "ff-meta-serif-web-pro", serif !important;
-  font-weight: 500 !important;
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 600 !important;
   font-size: 15px !important;
   line-height: 2;
 }
@@ -5842,14 +5853,14 @@ iframe {
 }
 
 .menu-king-container {
-  width: 650px;
+  width: 680px;
 }
 
 @media screen and (min-width: 755px) {
   .flex-menu {
     font-weight: 500;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     margin-top: 15px;
   }
@@ -5861,7 +5872,8 @@ iframe {
   .brown {
     font-size: 17px !important;
   }
-  
+
   .menu-item p {
     font-size: 17px !important;
   }
+}
