@@ -5267,7 +5267,7 @@ table.alt tbody tr td {
   justify-content: center;
   background-color: #1e2731;
   color: #ffffff;
-  background-image: url("../../images/luke.jpg");
+  background-image: url("../../images/people.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -5856,6 +5856,23 @@ iframe {
   width: 680px;
 }
 
+.logo-container {
+  background: #ffffff99;
+  padding: 30px;
+  border-radius: 5%;
+  margin: auto;
+}
+
+.logo-container img {
+  width: 70%;
+}
+
+@media screen and (min-width: 480px) {
+  .logo-container {
+    width: 95%;
+  }
+}
+
 @media screen and (min-width: 755px) {
   .flex-menu {
     font-weight: 500;
@@ -5875,5 +5892,11 @@ iframe {
 
   .menu-item p {
     font-size: 17px !important;
+  }
+
+  .logo-container {
+    width: 85%;
+    padding: 45px 0px;
+    border-radius: 10%;
   }
 }
