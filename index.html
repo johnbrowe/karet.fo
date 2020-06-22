@@ -75,9 +75,10 @@
           <img src="./images/karet-logo.svg" alt="Karet logo" width="300" />
         </div>
         <p style="font-size: 20px; margin-top: 15px;">
-          Vit hava opið hvønn dag frá 12:00 til 22:00 <br /><i
-            >(køkurin stongir kl. 21:00)</i
-          >
+          Vit hava opið: <br />
+          <i>Mánadag - Hósdag:</i> 11:30 til 15:30<br />
+          <i>Fríggjadag og Leygardag:</i> 11:30 til 20:00 <br />
+          <i>Sunnudag:</i> 11:30 til 15:30
 
           <br />Tlf.
           <a itemprop="telephone" href="tel:+298500610"><b>+298 500 610</b></a>
@@ -362,13 +363,17 @@
                   <div class="menu-item">
                     <p class="color-gold">DRINKS</p>
 
-                    <div class="menu-item-faroese flex-menu two-columns ">
+                    <div class="menu-item-faroese flex-menu two-columns">
                       <!-- item -->
                       <div class="item-flex">
                         <p>
                           GIN & TONIC
                           <span
-                            style="font-size: 12px; display: block; font-style: italic;"
+                            style="
+                              font-size: 12px;
+                              display: block;
+                              font-style: italic;
+                            "
                             >Baraldur gin & Fever Tree tonic</span
                           >
                         </p>
@@ -380,7 +385,11 @@
                         <p>
                           GIN & TONIC
                           <span
-                            style="font-size: 12px; display: block; font-style: italic;"
+                            style="
+                              font-size: 12px;
+                              display: block;
+                              font-style: italic;
+                            "
                             >Hendrick’s gin & Fever Tree tonic</span
                           >
                         </p>
@@ -421,7 +430,7 @@
                   <div class="menu-item">
                     <p class="color-gold">ØL & CIDER / BEER & CIDER</p>
 
-                    <div class="menu-item-faroese flex-menu two-columns ">
+                    <div class="menu-item-faroese flex-menu two-columns">
                       <!-- item -->
                       <div class="item-flex">
                         <p>
@@ -515,7 +524,7 @@
                   <div class="menu-item">
                     <p class="color-gold">VÍN / WINE</p>
 
-                    <div class="menu-item-faroese flex-menu two-columns ">
+                    <div class="menu-item-faroese flex-menu two-columns">
                       <!-- item -->
                       <div class="item-flex">
                         <p>
@@ -574,7 +583,7 @@
                   <div class="menu-item">
                     <p class="color-gold">SOFT DRINKS</p>
 
-                    <div class="menu-item-faroese flex-menu two-columns ">
+                    <div class="menu-item-faroese flex-menu two-columns">
                       <!-- item -->
                       <div class="item-flex">
                         <p>
@@ -683,8 +692,8 @@
     <script>
       MicroModal.init();
 
-      (function($) {
-        $("#modal-open-map").click(function() {
+      (function ($) {
+        $("#modal-open-map").click(function () {
           MicroModal.show("modal-1");
         });
       })(jQuery);
@@ -696,7 +705,7 @@
 
         map = new google.maps.Map(document.getElementById("map"), {
           center: latlon,
-          zoom: 16
+          zoom: 16,
         });
 
         var image = {
@@ -706,13 +715,13 @@
           // The origin for this image is (0, 0).
           origin: new google.maps.Point(0, 0),
           // The anchor for this image is the base of the flagpole at (0, 32).
-          anchor: new google.maps.Point(0, 32)
+          anchor: new google.maps.Point(0, 32),
         };
 
         var marker = new google.maps.Marker({
           position: latlon,
           map: map,
-          icon: image
+          icon: image,
         });
       }
     </script>
