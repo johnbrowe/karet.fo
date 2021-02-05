@@ -5248,7 +5248,7 @@ table.alt tbody tr td {
 /* Banner */
 
 #banner {
-  padding: 6rem 8% 3.5rem 8%;
+  padding: 1rem 8% 3.5rem 8%;
   -moz-align-items: center;
   -webkit-align-items: center;
   -ms-align-items: center;
@@ -5261,9 +5261,9 @@ table.alt tbody tr td {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  background-color: #1e2731;
+  /* background-color: #1e2731; */
   color: #ffffff;
-  background-image: url("../../images/banner1.jpg");
+  /* background-image: url("../../images/banner1.jpg"); */
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -5870,6 +5870,10 @@ iframe {
 }
 
 @media screen and (min-width: 755px) {
+  #banner {
+    padding: 6rem 8% 3.5rem 8%;
+  }
+
   .flex-menu {
     font-weight: 500;
     display: grid;
@@ -5895,4 +5899,12 @@ iframe {
     padding: 45px 0px;
     border-radius: 10%;
   }
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
 }
