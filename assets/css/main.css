@@ -5248,7 +5248,7 @@ table.alt tbody tr td {
 /* Banner */
 
 #banner {
-  padding: 1rem 8% 3.5rem 8%;
+  padding: 1rem;
   -moz-align-items: center;
   -webkit-align-items: center;
   -ms-align-items: center;
@@ -5870,9 +5870,9 @@ iframe {
 }
 
 @media screen and (min-width: 755px) {
-  #banner {
+  /* #banner {
     padding: 3rem 8% 3.5rem 8%;
-  }
+  } */
 
   .flex-menu {
     font-weight: 500;
