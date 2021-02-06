@@ -69,31 +69,46 @@
         </div>
       </div>
     </div>
-
-    <!-- Banner -->
-    <section id="banner">
-      <div class="inner">
-        <div class="logo-container">
-          <img src="./images/karet-logo.svg" alt="Karet logo" width="300" />
+    <div style="height: 100vh">
+      <video
+        playsinline
+        autoplay
+        muted
+        loop
+        poster="./images/banner1.jpg"
+        id="bgvid"
+      >
+        <!-- <source src="polina.webm" type="video/webm"> -->
+        <source src="./assets/videos/overoptimized.mp4" type="video/mp4" />
+      </video>
+      <!-- Banner -->
+      <section id="banner" style="position: absolute; top: 0; width: 100vw">
+        <div class="inner">
+          <div class="logo-container">
+            <img src="./images/karet-logo.svg" alt="Karet logo" width="300" />
+          </div>
+          <p style="font-size: 18px; margin-top: 15px; margin-bottom: 10px">
+            Vit hava opið: <br />
+            <i>Hvønn dag</i> 11:30 til 21:00
+          </p>
+          <p>
+            <b>Eisini møguligt at bíleggja út við</b>
+            <br />Tlf.
+            <a itemprop="telephone" href="tel:+298500610"
+              ><b>+298 500 610</b></a
+            >
+          </p>
+          <ul class="actions special">
+            <li>
+              <a id="modal-open-map" class="button large wide">Bílegg borð</a>
+            </li>
+            <li>
+              <a href="#four" class="button large wide scrollToMenu">Menu</a>
+            </li>
+          </ul>
         </div>
-        <p style="font-size: 20px; margin-top: 15px">
-          Vit hava opið: <br />
-          <i>Hvønn dag</i> 11:30 til 21:00<br />
-          <br />
-          <b>Eisini møguligt at bíleggja út við</b>
-          <br />Tlf.
-          <a itemprop="telephone" href="tel:+298500610"><b>+298 500 610</b></a>
-        </p>
-        <ul class="actions special">
-          <li>
-            <a id="modal-open-map" class="button large wide">Bílegg borð</a>
-          </li>
-          <li>
-            <a href="#four" class="button large wide scrollToMenu">Menu</a>
-          </li>
-        </ul>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <!-- Carousel -->
     <section id="four" class="wrapper style4">
